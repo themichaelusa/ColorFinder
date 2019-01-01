@@ -49,7 +49,14 @@ class ColorFinder:
 	# example: [255, 255, 255] --> 'ffffff'
 	def rgb_list_to_hex(self, rgb_list):
 		as_hex = [str(hex(num))[2:] for num in rgb_list]
-		return ''.join(as_hex[:3])
+		as_hex = ''.join(as_hex[:3])
+		
+		rem_hex = 6-len(as_hex)
+		if as_hex_len > 0:
+			nil_add = '0'*(rem_hex)
+			as_hex.append(nil_add)
+
+		return as_hex	
 
 	# example: 'ffffff' --> [255, 255, 255]
 	def hex_to_rgb_list(self, hex_code):
