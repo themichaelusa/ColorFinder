@@ -80,8 +80,3 @@ class ColorFinder:
 		hex_code = self.rgb_list_to_hex(rgb_list)
 		return self.colors_dict[hex_code]
 
-
-if __name__ == '__main__':
-	cf = ColorFinder()
-	cf.rgb_list_to_hex([73, 0, 14])
-
